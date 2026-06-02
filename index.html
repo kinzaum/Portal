@@ -2,126 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="monetag" content="752846cc575520bca2a815127048a5f2">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAAOpen Portal</title>
-    <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); 
-            margin: 0; 
-            padding: 50px 20px;
-            min-height: 100vh;
-            color: #2c3e50;
-        }
-
-        h1 { 
-            text-align: center; 
-            color: #1a365d; 
-            margin-bottom: 20px; 
-            font-size: 2.5em; 
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        h1::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: #007bff;
-            margin: 15px auto 30px;
-            border-radius: 2px;
-        }
-
-        .beta-tag {
-            text-align: center; 
-            color: #555; 
-            font-weight: bold; 
-            margin-bottom: 50px;
-            font-size: 1.1em;
-        }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 30px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
-
-        .card { 
-            background: white; 
-            padding: 25px; 
-            border-radius: 15px; 
-            border: 3px solid #b3cde0;
-            text-decoration: none; 
-            color: #2c3e50; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .card:hover { 
-            transform: scale(1.03); 
-            border-color: #007bff;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
-        }
-
-        .card img { 
-            width: 100%; 
-            height: 240px; 
-            object-fit: contain; 
-            margin-bottom: 20px; 
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-        }
-
-        .card h3 { font-size: 1.3em; margin: 0; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Welcome to CAAOpen Portal</h1>
-    <div class="beta-tag">(Educational)</div>
+    <h1 id="title">Welcome to CAAOpen Portal</h1>
+    <div class="beta-tag" id="beta">(Educational)</div>
 
     <div class="grid">
         <a href="https://aprendaingles.caaopen.org" class="card">
-            <img src="Reading.png" alt="Aprenda Inglês">
-            <h3>Treine sua pronunciação (English ONLY)</h3>
+            <img src="Reading.png" alt="Learn English">
+            <h3 data-key="pronunciation">Treine sua pronúncia (English Only)</h3>
         </a>
-
         <a href="https://cacapalavras.caaopen.org" class="card">
-            <img src="cacapalavra.png" alt="Caça Palavras">
-            <h3>Caça Palavras (English/Portugues)</h3>
+            <img src="cacapalavra.png" alt="Word Search">
+            <h3 data-key="wordsearch">Word Search (English/Portuguese)</h3>
         </a>
-
         <a href="https://readingchallenge.caaopen.org" class="card">
             <img src="Snail.png" alt="Reading Challenge">
-            <h3>Reading Challenge (English)</h3>
+            <h3 data-key="reading">Reading Challenge (English)</h3>
         </a>
-
         <a href="https://math.caaopen.org/" class="card">
-            <img src="logomath.png" alt="Math Expressions">
-            <h3>Math Practice (English/Português/Español/Deutsch/日本語)</h3>
+            <img src="logomath.png" alt="Basic Expressions">
+            <h3 data-key="math">Math for Kids (English/Portuguese/Espanish/German/Japanese)</h3>
         </a>
-
         <a href="https://caaopen.org" class="card">
             <img src="Portal.png" alt="AAC Board Communication">
-            <h3>AAC BOARD Communication (19 Linguas Diferentes)</h3>
+            <h3 data-key="aac">AAC BOARD Communication (19 Different Languages)</h3>
         </a>
-        
         <a href="https://keyboard.caaopen.org" class="card">
-            <img src="letterboard.png" alt="AAC KEYBOARD">
-            <h3>KEYBOARD (English ONLY)</h3>
+            <img src="keyboards.png" alt="AAC KEYBOARD">
+            <h3 data-key="keyboard">AAC KEYBOARD (English ONLY)</h3>
         </a>
     </div>
-<!-- Paste the Monetag script right here -->
-    <script>(function(s){s.dataset.zone='11087591',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+    <script src="script.js"></script>
 </body>
 </html>
