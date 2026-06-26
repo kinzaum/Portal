@@ -4,23 +4,56 @@ body {
     margin: 0; padding: 50px 20px;
     min-height: 100vh; color: #2c3e50;
 }
+
 h1 { 
     text-align: center; color: #1a365d; margin-bottom: 20px; 
     font-size: 2.5em; text-transform: uppercase; 
     letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     position: relative;
 }
+
 h1::after {
     content: ''; display: block; width: 100px; height: 4px;
     background: #007bff; margin: 15px auto 30px; border-radius: 2px;
 }
-.beta-tag { text-align: center; color: #555; font-weight: bold; margin-bottom: 50px; font-size: 1.1em; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-.card { 
+
+/* Updated: Layout for the thumbnail bar at the top */
+.thumbnail-bar { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-bottom: 50px; 
+}
+
+/* Updated: Smaller, thumbnail-focused card style */
+.thumbnail-bar .card { 
+    width: 100px; /* Compact width for the icon row */
     background: white; padding: 10px; border-radius: 5px; border: 2px solid #b3cde0;
     text-decoration: none; color: #2c3e50; box-shadow: 0 5px 10px rgba(0,0,0,0.1); 
-    transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; text-align: center;
+    transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; 
 }
-.card:hover { transform: scale(1.03); border-color: #007bff; box-shadow: 0 5px 10px rgba(0,0,0,0.2); }
-.card img { width: 100%; height: 50px; object-fit: contain; margin-bottom: 5px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-.card h3 { font-size: 1.3em; margin: 0; }
+
+.thumbnail-bar .card img { 
+    width: 60px; /* Small icon size */
+    height: 60px; 
+    object-fit: contain; 
+}
+
+/* Hide text labels in the top bar to keep it neat */
+.thumbnail-bar .card h3 { display: none; }
+
+.card:hover { transform: scale(1.05); border-color: #007bff; box-shadow: 0 5px 10px rgba(0,0,0,0.2); }
+
+/* New: Styling for the persistent Disclaimer section */
+.disclaimer-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    line-height: 1.6;
+    font-size: 0.9em;
+    color: #333;
+    border-top: 4px solid #b3cde0;
+}
